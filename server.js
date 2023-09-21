@@ -15,11 +15,8 @@ app.post("/", (req, res) => {
     date,
     startDate: moment(date).startOf("day"),
     endDate: moment(date).endOf("day"),
-    // startDate1: moment(date).startOf("day").toDate(),
-    // endDate2: moment(date).endOf("day").toDate(),
-    // startDate3: moment(date).startOf("day").utc(),
-    // startDate4: moment.utc(date),
-    // endDate3: moment(date).utc(),
+    startDateUTC: moment.utc(date).startOf("day"),
+    endDateUTC: moment.utc(date).endOf("day"),
   });
 });
 
