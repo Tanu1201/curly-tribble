@@ -17,9 +17,11 @@ app.post("/", (req, res) => {
     endDate: moment(date).endOf("day"),
     startDateUTC: moment.utc(date).startOf("day"),
     endDateUTC: moment.utc(date).endOf("day"),
+    currentTime: moment(),
   });
 });
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+console.log(moment("2023-09-20T23:59:59.999Z").local());
