@@ -18,6 +18,8 @@ app.post("/", (req, res) => {
     startDateUTC: moment.utc(date).startOf("day"),
     endDateUTC: moment.utc(date).endOf("day"),
     currentTime: moment(),
+    startOfTheYear: moment().startOf("year"),
+    today: moment().endOf("day"),
   });
 });
 
